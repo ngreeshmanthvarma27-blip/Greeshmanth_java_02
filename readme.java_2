@@ -1,0 +1,293 @@
+# Ticket Booker
+
+A simple console-based **Movie Ticket Booking System** developed using **Core Java**.
+
+The program allows users to select a movie, location, theatre, show timing, and seat. It also randomly marks some seats as already booked and prevents users from selecting unavailable seats.
+
+## Features
+
+* Movie selection
+* 4 different locations
+* 4 theatres for each location
+* 3 show timings for each theatre
+* 16 seats available per show
+* Randomly booked seats
+* Seat availability checking
+* Invalid input validation
+* Prevents booking an already booked seat
+* Displays complete booking details
+* Simple console-based interface
+
+## Technologies Used
+
+* Java
+* Scanner
+* Random
+* Arrays
+* Loops
+* Conditional Statements
+* String handling
+
+## Movies
+
+The project currently contains:
+
+1. Salaar
+2. Pushpa 2
+3. Toxic
+4. Animal
+5. Varsham (Re-release)
+
+## Locations
+
+The available locations are:
+
+1. Vizianagaram
+2. Vizag
+3. Bangalore
+4. Hyderabad
+
+## Theatres
+
+Each location contains 4 theatres.
+
+### Vizianagaram
+
+* LGT Cinemas
+* NCS Theatre
+* Sri Lakshmi Theatre
+* SVC Cinemas
+
+### Vizag
+
+* Sangam Sarat
+* Melody Theatre
+* INOX
+* Cinepolis
+
+### Bangalore
+
+* PVR Vega
+* Urvashi Cinema
+* INOX Garuda
+* PVR Orion
+
+### Hyderabad
+
+* PVR Prasads
+* AMB Cinemas
+* AAA Cinemas
+* INOX GVK
+
+## Seat System
+
+The system contains 16 seats:
+
+```text
+A1    A2    A3    A4
+B1    B2    B3    B4
+C1    C2    C3    C4
+D1    D2    D3    D4
+```
+
+Five seats are randomly selected and marked as unavailable when the program starts.
+
+`X` represents a booked seat.
+
+## How It Works
+
+1. The program displays the available movies.
+2. The user selects a movie.
+3. The available locations are displayed.
+4. The user selects a location.
+5. The theatres available at that location are displayed.
+6. The user selects a theatre.
+7. Available show timings are displayed.
+8. The user selects a timing.
+9. The available seats are displayed.
+10. The user selects a seat.
+11. The program checks whether the seat is valid and available.
+12. If the seat is already booked, the user is asked to select another seat.
+13. After successful selection, booking details are displayed.
+
+## Input Validation
+
+The program handles several invalid conditions.
+
+### Invalid Movie
+
+If the user enters a number outside `1-5`, the program asks again.
+
+### Invalid Location
+
+If the user enters a number outside `1-4`, the program asks again.
+
+### Invalid Theatre
+
+If the user enters a number outside `1-4`, the program asks again.
+
+### Invalid Timing
+
+If the user enters a number outside `1-3`, the program asks again.
+
+### Invalid Seat
+
+The valid seat format is:
+
+```text
+A1
+A2
+B3
+D4
+```
+
+Invalid inputs such as `A5`, `E1`, `AA`, or `1A` are rejected.
+
+### Booked Seat
+
+If the selected seat is already booked, the program displays:
+
+```text
+Seat Not Available! Choose Another Seat.
+```
+
+The user can then select another seat.
+
+### No Seats Available
+
+If all seats are booked, the program displays:
+
+```text
+No Seats Available!
+```
+
+## Project Structure
+
+```text
+TicketBooker/
+│
+├── TicketBooker.java
+└── README.md
+```
+
+## Requirements
+
+To run this project, you need:
+
+* Java JDK installed
+* Any Java-supported IDE or code editor
+* Command Prompt or Terminal
+
+## How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_REPOSITORY_LINK
+```
+
+### 2. Open the Project
+
+Navigate to the project folder:
+
+```bash
+cd TicketBooker
+```
+
+### 3. Compile the Program
+
+```bash
+javac TicketBooker.java
+```
+
+### 4. Run the Program
+
+```bash
+java TicketBooker
+```
+
+## Sample Flow
+
+```text
+-------- Ticket Booker --------
+Welcome to the Ticket Booker
+
+Available Movies:
+1) Salaar
+2) Pushpa 2
+3) Toxic
+4) Animal
+5) Varsham (Re-release)
+
+Select Movie (1-5):
+```
+
+After selecting the movie, the program asks for:
+
+```text
+Location
+Theatre
+Timing
+Seat
+```
+
+Finally, it displays:
+
+```text
+-------- Booking Details --------
+Movie    : Salaar
+Location : Vizianagaram
+Theatre  : LGT Cinemas
+Time     : 9:30 AM
+Seat     : B2
+---------------------------------
+Successfully Booked!
+Enjoy Your Movie!
+```
+
+## Concepts Demonstrated
+
+This project demonstrates important Core Java concepts:
+
+* Classes and objects
+* `main()` method
+* Variables
+* Arrays
+* Multidimensional arrays
+* Loops
+* `if-else`
+* `while` loops
+* `for` loops
+* `do-while` loop
+* `Random` class
+* `Scanner` class
+* String methods
+* Character handling
+* Input validation
+* Array indexing
+
+## Future Improvements
+
+Possible future upgrades include:
+
+* Multiple ticket booking
+* Different ticket prices
+* Payment system
+* User login and registration
+* Booking cancellation
+* Ticket ID generation
+* Date selection
+* Different seat prices
+* Food and beverage booking
+* Booking history
+* File/database storage
+* Separate seat availability for every theatre and show
+* Graphical User Interface (GUI)
+
+## Author
+
+Developed as a **Core Java project** to practice Java programming, arrays, loops, random number generation, and input validation.
+
+## License
+
+This project is created for **educational and learning purposes**.
